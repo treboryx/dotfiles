@@ -38,9 +38,6 @@ pecl install imagick redis swoole
 # Install Laravel Valet
 $HOME/.composer/vendor/bin/valet install
 
-# Install Global Ray
-$HOME/.composer/vendor/bin/global-ray install
-
 # Create a Sites directory
 mkdir $HOME/Sites
 
@@ -49,7 +46,7 @@ mkdir $HOME/Sites/blade-ui-kit
 mkdir $HOME/Sites/laravel
 
 # Clone Github repositories
-$DOTFILES/clone.sh
+# $DOTFILES/clone.sh
 
 # Symlink the Mackup config file to the home directory
 ln -s $DOTFILES/.mackup.cfg $HOME/.mackup.cfg
