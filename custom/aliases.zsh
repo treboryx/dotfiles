@@ -6,6 +6,7 @@ alias ll="/opt/homebrew/opt/coreutils/libexec/gnubin/ls -AhlFo --color --group-d
 alias shrug="echo '¯\_(ツ)_/¯' | pbcopy"
 alias compile="commit 'compile'"
 alias version="commit 'version'"
+alias uuid='uuidgen | tr "[:upper:]" "[:lower:]" | pbcopy'
 
 # Directories
 alias dotfiles="cd $DOTFILES"
@@ -49,3 +50,16 @@ alias wip="commit wip"
 
 # Node
 rd='npm run dev'
+
+
+function killport() {
+	kill -9 $(lsof -ti:$1)
+}
+
+function ctunnel() {
+  cloudflared tunnel --url http://localhost:$1 run local
+}
+
+alias checkport="netstat -vanp tcp | grep"
+
+alias localpub="npm publish --registry http://localhost:4873/"
